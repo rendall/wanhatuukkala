@@ -3,32 +3,51 @@
 
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wanhan-tuukkalan talli</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mountains+of+Christmas:wght@700&display=swap"
-      rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <meta name="description"
+      content="Wanhan-tuukkalan talli sijaitsee kätevästi lähellä Mikkelin keskustaa osoitteessa Tuukkalan kylätie 16.  Tarjoamme monipuolisia palveluita hevosharrastajille, mukaan lukien ratsastuksenopetusta, hevosten vuokrausta ja tallipaikkoja viihtyisässä maalaistallissa.">
+
+    <meta property="og:title" content="Wanhan-tuukkalan talli">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
     <style>
       body {
+        background-color: #d3c4c0;
+        color: #333;
         font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #d3c4c0;
-        color: #333;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
 
       .display {
         font-family: "Great Vibes", cursive;
         font-weight: 400;
         font-style: normal;
-        font-size: 5rem;
+        font-size: 7rem;
         padding: 0;
         margin: 0;
       }
 
       .simple-icon {
-        width: 2rem;
+        width: 3.5rem;
+        margin-right: 2rem;
       }
 
       header {
@@ -39,15 +58,24 @@
       }
 
       main {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
+        background-image: url('./img/banner.jpg');
+        background-repeat: repeat;
+        background-size: auto 100%;
+        flex-grow: 1;
+        padding: 1rem;
+      }
+
+      div.placard {
+        max-width: 50rem;
+        margin: 2.5rem auto;
+        padding: 2.5rem;
         background-color: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 1.3rem;
       }
 
       section {
-        margin-bottom: 20px;
+        margin-bottom: 1.5rem;
       }
 
       section:last-child {
@@ -70,6 +98,14 @@
       a:hover {
         text-decoration: none;
       }
+
+      @media (min-width: 2049px) {
+
+        main {
+          background-size: cover;
+          /* Example property */
+        }
+      }
     </style>
   </head>
 
@@ -78,33 +114,36 @@
       <h1 class="display">Wanhan-tuukkalan talli</h1>
     </header>
     <main>
-      <section>
-        <p>Wanhan-tuukkalan talli sijaitsee kätevästi lähellä Mikkelin keskustaa osoitteessa Tuukkalan kylätie 16.
-          Tarjoamme monipuolisia palveluita hevosharrastajille, mukaan lukien ratsastuksenopetusta, hevosten vuokrausta
-          ja tallipaikkoja viihtyisässä maalaistallissa.</p>
-      </section>
-      <section>
-        <address>
-          Tuukkalan kylätie 16, <br>
-          Mikkeli, Finland, 50500
-        </address>
-      </section>
-      <section>
-        <p>Puhelin: 044 5228777</p>
-      </section>
-      <section>
-        <p>Sähköposti: <a href="mailto:varaukset@wanhatuukkala.fi">varaukset@wanhatuukkala.fi</a></p>
-      </section>
-      <section class="social-media">
-        <a href="https://www.facebook.com/WanhanTuukkalanRatsastajat"><img class="simple-icon" alt="Facebookissa"
-            src="images/facebook.svg" /></a>
+      <div class="placard">
+        <section>
+          <p>Wanhan-tuukkalan talli sijaitsee kätevästi lähellä Mikkelin keskustaa osoitteessa Tuukkalan kylätie 16.
+            Tarjoamme monipuolisia palveluita hevosharrastajille, mukaan lukien ratsastuksenopetusta, hevosten
+            vuokrausta
+            ja tallipaikkoja viihtyisässä maalaistallissa.</p>
+        </section>
+        <section>
+          <address>
+            Tuukkalan kylätie 16, <br>
+            Mikkeli, Finland, 50500
+          </address>
+        </section>
+        <section>
+          <p>Puhelin: 044 5228777</p>
+        </section>
+        <section>
+          <p>Sähköposti: <a href="mailto:varaukset@wanhatuukkala.fi">varaukset@wanhatuukkala.fi</a></p>
+        </section>
+        <section class="social-media">
+          <a href="https://www.facebook.com/WanhanTuukkalanRatsastajat"><img class="simple-icon" alt="Facebookissa"
+              src="img/facebook.svg" /></a>
 
-        <a href="https://maps.app.goo.gl/DWJ1rBJajDQakeiDA"><img class="simple-icon" alt="Kartalla"
-            src="images/googlemaps.svg" /></a>
+          <a href="https://maps.app.goo.gl/DWJ1rBJajDQakeiDA"><img class="simple-icon" alt="Kartalla"
+              src="img/googlemaps.svg" /></a>
 
-        <a href="https://github.com/rendall/wanhatuukkala"><img class="simple-icon" alt="Lähdekoodi"
-            src="images/github.svg" /></a>
-      </section>
+          <a href="https://github.com/rendall/wanhatuukkala"><img class="simple-icon" alt="Lähdekoodi"
+              src="img/github.svg" /></a>
+        </section>
+      </div>
     </main>
   </body>
 
