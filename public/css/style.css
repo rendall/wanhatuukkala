@@ -273,7 +273,21 @@ body {
 
 .simple-icon {
   width: 3.5rem;
-  margin-right: 2rem;
+  border: 1px solid transparent;
+  padding: 0.25rem;
+}
+
+.simple-icon:hover {
+  border: 1px solid #5a5cc6;
+}
+
+.simple-icon:active {
+  border: 1px solid #50281b;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
 }
 
 header {
@@ -298,7 +312,7 @@ div.placard {
   margin: 2.5rem auto;
   padding: 2.5rem;
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
   font-size: 1.3rem;
 }
 
@@ -327,7 +341,27 @@ a:hover {
   text-decoration: none;
 }
 
-@media (min-width: 1053px) {
+@media screen and (max-width: 680px) {
+  .display {
+    font-size: 3rem;
+  }
+
+  header {
+    line-height: 4rem;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 681px) {
+  .display {
+    font-size: 5rem;
+  }
+  header {
+    line-height: 6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   main {
     background-size: cover;
     /* Example property */
