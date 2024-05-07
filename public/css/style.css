@@ -252,7 +252,9 @@ textarea {
 body {
   background-color: #d3c4c0;
   color: #333;
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -261,8 +263,8 @@ body {
 }
 
 .display {
-  font-family: "Great Vibes", cursive;
-  font-weight: 400;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
   font-style: normal;
   font-size: 7rem;
   padding: 0;
