@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://wanhatuukkala.com/*"
+  to = "https://wanhatuukkala.fi/:splat"
+  status = 301
+  force = true
