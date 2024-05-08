@@ -337,8 +337,18 @@ a:hover {
   display: block;
 }
 
-.map:hover {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 1);
+.map-link {
+  border: 1px solid transparent;
+  padding: 0.5rem;
+  display: block;
+}
+
+.map-link:hover {
+  border: 1px solid #5a5cc6;
+}
+
+.map-link:active {
+  border: 1px solid #50281b;
 }
 
 .social-media {
@@ -346,19 +356,22 @@ a:hover {
   justify-content: space-between;
 }
 
-.simple-icon {
-  width: 3.5rem;
+.social-media-link {
   border: 1px solid transparent;
   border-radius: 50%;
   padding: 0.25rem;
 }
 
-.simple-icon:hover {
+.social-media-link:hover {
   border: 1px solid #5a5cc6;
 }
 
-.simple-icon:active {
+.social-media-link:active {
   border: 1px solid #50281b;
+}
+
+.simple-icon {
+  width: 3.5rem;
 }
 
 @media screen and (max-width: 680px) {
