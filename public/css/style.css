@@ -366,6 +366,10 @@ a:hover {
     font-size: 3rem;
   }
 
+  .contact-info {
+    flex-direction: column;
+  }
+
   header {
     line-height: 4rem;
     padding: 0;
@@ -384,6 +388,5 @@ a:hover {
 @media screen and (min-width: 1024px) {
   main {
     background-size: cover;
-    /* Example property */
   }
 }
