@@ -274,6 +274,7 @@ body {
 .simple-icon {
   width: 3.5rem;
   border: 1px solid transparent;
+  border-radius: 50%;
   padding: 0.25rem;
 }
 
@@ -288,6 +289,21 @@ body {
 .social-media {
   display: flex;
   justify-content: space-between;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.map {
+  width: 20rem;
+  height: 20rem;
+  display: block;
+}
+
+.map:hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 1);
 }
 
 header {
@@ -305,15 +321,6 @@ main {
   background-position: left bottom;
   flex-grow: 1;
   padding: 1rem;
-}
-
-div.placard {
-  max-width: 50rem;
-  margin: 2.5rem auto;
-  padding: 2.5rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-  font-size: 1.3rem;
 }
 
 section {
@@ -339,6 +346,19 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+.placard {
+  max-width: 50rem;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 1.3rem;
+}
+
+.address-panel {
+  width: 25rem;
 }
 
 @media screen and (max-width: 680px) {
