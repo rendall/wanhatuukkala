@@ -67,6 +67,16 @@
         font-size: 1.3rem;
       }
     </style>
+    <script defer>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const mapImage = document.querySelector('.map');
+        mapImage.addEventListener('error', function () {
+          this.onerror = null;
+          this.src = 'img/staticmap-fallback.png';
+          console.error('Failed to load Google map static image. Reverting to fallback image. Check the network tab of developer tools for more info.');
+        });
+      });
+    </script>
   </head>
 
   <body>
