@@ -23,3 +23,5 @@ Push your changes to `master` and those changes will be reflected on the product
 ### Development philosophy
 
 The horse farm does not need a complicated or heavy website. Resist the urge to add React or other heavy frameworks or services. Just show basic information and links.
+
+Everything appearing on the website must be in Finnish, while all source code and documentation must be in English.
