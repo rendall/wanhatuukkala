@@ -11,9 +11,15 @@ Voit myös [luoda uuden tukipyynnön täällä](https://github.com/rendall/wanha
 Have `npm` installed, probably via `Node.js`. Run a local instance by:
 
 ```bash
-npx http-server ./public
+npx http-server -a localhost ./public
 ```
 
-You might need to hard refresh: `CTRL + SHIFT + r`
+Then open a browser at <http://localhost:8080>
+
+If it says _Hello world! Tip: Check your console_ then you need to hard refresh the browser: `CTRL + SHIFT + r`
 
 Push your changes to `master` and those changes will be reflected on the production website.
+
+### Development philosophy
+
+The horse farm does not need a complicated or heavy website. Resist the urge to add React or other heavy frameworks or services. Just show basic information and links.
