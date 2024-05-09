@@ -327,8 +327,13 @@ a:hover {
   justify-content: space-between;
 }
 
+.word {
+  /* Used to properly break long strings when the viewport is narrow, e.g.:  <span class="word">varaukset</span><span class="word">@wanhatuukkala.fi</span> */
+  display: inline-block;
+}
+
 .address-panel {
-  width: 25rem;
+  max-width: 25rem;
   margin-left: 1rem;
 }
 
@@ -342,6 +347,7 @@ a:hover {
   border: 1px solid transparent;
   padding: 0.5rem;
   display: block;
+  overflow: hidden;
 }
 
 .map-link:hover {
