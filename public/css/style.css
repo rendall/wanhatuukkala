@@ -265,7 +265,7 @@ body {
 header {
   background-color: #50281b;
   color: white;
-  padding: 1rem;
+  padding: 0;
   text-align: center;
   line-height: 8rem;
 }
@@ -314,7 +314,7 @@ a:hover {
 }
 
 .placard {
-  max-width: 35rem;
+  max-width: 50rem;
   margin: 2.5rem auto;
   padding: 2.5rem;
   background-color: rgba(255, 255, 255, 0.9);
@@ -325,7 +325,12 @@ a:hover {
 .contact-info {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.contact-info address {
+  margin-left: 1.5rem;
+
 }
 
 .word {
