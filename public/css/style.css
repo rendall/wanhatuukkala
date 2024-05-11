@@ -314,7 +314,7 @@ a:hover {
 }
 
 .placard {
-  max-width: 50rem;
+  max-width: 35rem;
   margin: 2.5rem auto;
   padding: 2.5rem;
   background-color: rgba(255, 255, 255, 0.9);
@@ -324,17 +324,13 @@ a:hover {
 
 .contact-info {
   display: flex;
+  width: 100%;
   justify-content: space-between;
 }
 
 .word {
   /* Used to properly break long strings when the viewport is narrow, e.g.:  <span class="word">varaukset</span><span class="word">@wanhatuukkala.fi</span> */
   display: inline-block;
-}
-
-.address-panel {
-  max-width: 25rem;
-  margin-left: 1rem;
 }
 
 .map {
