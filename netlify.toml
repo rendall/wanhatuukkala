@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "/*/wp1"
+  to = "https://wanhatuukkala.fi/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://wanhatuukkala.com/*"
   to = "https://wanhatuukkala.fi/:splat"
   status = 301
