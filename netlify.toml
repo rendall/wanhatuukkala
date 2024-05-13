@@ -5,6 +5,12 @@
   force = true
 
 [[redirects]]
+  from = "https://wanhantuukkalantalli.fi/*"
+  to = "https://wanhatuukkala.fi/:splat"
+  status = 301
+  force = true
+  
+[[redirects]]
   from = "https://wanhatuukkala.com/*"
   to = "https://wanhatuukkala.fi/:splat"
   status = 301
