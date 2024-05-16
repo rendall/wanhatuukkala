@@ -1,6 +1,6 @@
 # Wanhan-Tuukkalan tallin kotisivu
 
-<https://wanhatuukkala.fi>
+<https://wanhantuukkalantalli.fi>
 
 Tämä repositorio sisältää Wanhan-Tuukkalan Tallin verkkosivuston lähdekoodin. Jos huomaat sivustolla ongelmia, ole hyvä ja ilmoita niistä Heidille, niin voimme korjata ne.
 
@@ -51,7 +51,7 @@ Use your new-found ability to change the website as a way to explore and learn a
 
 ### Pushing live
 
-When you're ready and your goal is met, then you can push your changes live, that is, so they show up on <https://wanhantukkalantalli>. Here is how:
+When you're ready and your goal is met, then you can push your changes live so they show up on <https://wanhantukkalantalli.fi>. Here is how:
 
 1. First, make sure you really want these changes live. Don't accidentally turn the horse farm into an apple orchard, for instance!
 2. Open the _Source Control panel_ in VS Code
