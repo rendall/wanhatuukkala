@@ -31,8 +31,60 @@ Great. You have everything you need to make changes to the website. To do that, 
 1. Find or create a "workspace" folder on your computer. It can be in your documents folder or somewhere else convenient. Name it "websites" or "projects" or "workspace".
 2. Open _VS Code_. You should see a "Welcome" tab, and with a "Start" headline, and somewhere under that a _Clone Git Repository_ link. Click that.
 3. A text field will pop up. Enter this `https://github.com/rendall/wanhatuukkala`. This should download all of the source code into a `wanhatuukkala` folder _inside_ your workspace folder from step 1.
+4. Open the project in VS Code.
+   - When you have a chance, [read the Get Started section](https://code.visualstudio.com/docs/getstarted/userinterface) of the manual.
+   - On the left you should see a panel that has all of the files and folders of the project. The website folders are in the `public` folder. Inside that folder is an `index.html`. This is the source code for the home page of the website.
+5. With the project open in VS Code, [open a terminal](https://code.visualstudio.com/docs/terminal/basics) and type `npm -v`. If you get a version number, great! _Node.js_ is installed correctly. If instead you get a `Command 'npm' not found` error, then your installation of _Node.js_ is incorrect and you need to install it again, carefully. Ask me for help!
+6. Type `npx http-server -a localhost ./public`. This runs a webserver on your computer.
+7. Open <http://localhost> in your browser and you should see Heidi's website!
 
-#### More directions soon!
+Congratulations, you have everything you need to code!
+
+### Coding
+
+1. Open `index.html` in VS Code. This is Heidi's site.
+   - It is written in HTML (Hyper Text Markup Language). When you have a chance, [read more about HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics).
+2. Make a small change to the `index.html` page. For instance, replace the word `hevosten` with `omenan`. Save your change in VS Code and then refresh the browser. You should see your change on your local webstie.
+   - Don't worry. These changes aren't permanent and they do not affect the _production_ website. You only affect your local version of the site.
+
+### Pushing live
+
+First, a word about pushing live. Large, expensive projects have many rules and checks in place to make sure that the code that is pushed live (or _into production_) has no bugs. This website does not have such rules. You can easily mess up the website, so check, double-check and triple-check before pushing live. But this is how you can do it:
+
+1. To push your changes live on <https://wanhantuukkalantalli.fi>, open the _Source Control panel_ (Click **View** on the menu bar and then **Source Control**).
+2. In the _Message_ field, add a _short_ (under 50 character) description of your changes.
+3. Click _Commit_.
+
+#### Messed up website
+
+If somehow the production website is messed up, do not panic! Just fix your changes and follow steps 1 through 3 above.
+
+However, if the website is just so messed up that you don't know how to go forward, then this is how you go back:
+
+1. Type in the terminal `git checkout master && git pull`
+   - If git tells you that you have unsaved changes type `git stash`
+   - This stores your changes in the `stash`
+   - Later to recover your changes type `git stash pop`
+2. Get a local version of the website up and running. Make sure it's the messed-up version.
+3. Type in the terminal `git reset --hard HEAD~1`
+4. Refresh the browser. If the website is back to normal, great. If not, repeat step 3 and 4 until the website looks good.
+5. Type in the terminal `git push --force`
+   - This reverts all of the messed up changes back to what it was before.
+
+#### Pushing live with checks (recommended way)
+
+1. Add your changes to a `git branch`. There are two ways. Pick whichever is easiest for you:
+   1. Type `git checkout -b new-branch` into the terminal.
+      - `new-branch` can be anything descriptive instead of `new-branch`, like `update-price-list`. It should only be lower-case letters and - dashes.
+   2. Open the _Source Control panel_.
+      - Mouse-over just above the _Message_ field.
+      - You should see three dots appear `...` to the left of other icons with the tooltip _More actions_.
+      - Be careful, because there is _another_ three dots at the top, and that one is not the correct one.
+      - Select `Checkout to...`
+      - Enter a branch name. See Step 1 for naming ideas.
+      - Make sure that `+ Create new branch...` is highlighted and press _Enter_.
+2. In the _Source Control panel_, click the down caret `⌄` _next to_ the _Commit_ button.
+3. Select `Commit & Create Pull Request`
 
 ### Development philosophy
 
