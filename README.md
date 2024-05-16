@@ -45,26 +45,31 @@ Congratulations, you have everything you need to code!
 1. Open `index.html` in VS Code. This is Heidi's site.
    - It is written in HTML (Hyper Text Markup Language). When you have a chance, [read more about HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics).
 2. Make a small change to the `index.html` page. For instance, replace the word `hevosten` with `omenan`. Save your change in VS Code and then refresh the browser. You should see your change on your local webstie.
-   - Don't worry. These changes aren't permanent and they do not affect the _production_ website. You only affect your local version of the site.
+   - Don't worry. These changes aren't permanent and they do not affect the _production_ website. You only affect your local version of the site. Go ahead and undo that change.
+
+Use your new-found ability to change the website as a way to explore and learn about [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) and [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics). Add content like text and pictures. Change colors. Make mistakes. If you have a goal in mind, like adding a gallery or a new announcement, try to implement your goal. Ask for help! Have fun!
 
 ### Pushing live
 
-First, a word about pushing live. Large, expensive projects have many rules and checks in place to make sure that the code that is pushed live (or _into production_) has no bugs. This website does not have such rules. You can easily mess up the website, so check, double-check and triple-check before pushing live. But this is how you can do it:
+When you're ready and your goal is met, then you can push your changes live, that is, so they show up on <https://wanhantukkalantalli>. Here is how:
 
-1. To push your changes live on <https://wanhantuukkalantalli.fi>, open the _Source Control panel_ (Click **View** on the menu bar and then **Source Control**).
-2. In the _Message_ field, add a _short_ (under 50 character) description of your changes.
-3. Click _Commit_.
+1. First, make sure you really want these changes live. Don't accidentally turn the horse farm into an apple orchard, for instance!
+2. Open the _Source Control panel_ in VS Code
+   - (Click **View** on the menu bar and then **Source Control**).
+3. In the _Message_ field, the placeholder text should say (something like) _Message (Ctrl+Enter to commit on "master")_. It has to mention _"master"_.
+4. In that _Message_ field, add a _short_ (under 50 character) description of your changes.
+5. Click _Commit_.
 
 #### Messed up website
 
 If somehow the production website is messed up, do not panic! Just fix your changes and follow steps 1 through 3 above.
 
-However, if the website is just so messed up that you don't know how to go forward, then this is how you go back:
+However, if the website is just so messed up that you don't know how to go forward, then go back. This is how:
 
 1. Type in the terminal `git checkout master && git pull`
-   - If git tells you that you have unsaved changes type `git stash`
-   - This stores your changes in the `stash`
-   - Later to recover your changes type `git stash pop`
+   - If git tells you that you have unsaved changes type `git stash` and repeat step 1.
+   - `git stash` stores your changes in the `stash` which is a kind of temporary list of changes you want to get back to.
+   - Later, recover your changes with `git stash pop`
 2. Get a local version of the website up and running. Make sure it's the messed-up version.
 3. Type in the terminal `git reset --hard HEAD~1`
 4. Refresh the browser. If the website is back to normal, great. If not, repeat step 3 and 4 until the website looks good.
@@ -73,9 +78,11 @@ However, if the website is just so messed up that you don't know how to go forwa
 
 #### Pushing live with a Pull Request (the recommended way)
 
+Rather than pushing right to production, you could have other people look at your changes first and either approve the changes or they could point out errors or ask you to do something different. It's a way to share responsibility and make sure no errors creep in. You do this by creating a [_Pull Request_](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) (often shortened to _PR_) which is a kind of temporary forum to discuss your proposed changes. From there you can also see how your changes would look on the production site.
+
 Make sure your latest changes are saved then follow these steps:
 
-1. Add your changes to a `git branch`. There are two ways. Pick whichever is easiest for you:
+1. Add your changes to a _git branch_. There are two ways. Pick whichever is easiest for you:
    1. _either_: Type `git checkout -b new-branch` into the terminal.
       - `new-branch` can be anything descriptive instead of `new-branch`, like `update-price-list`. It should only be lower-case letters and - dashes.
       - Type `git commit -m "Describe your changes"`
@@ -105,6 +112,16 @@ Make sure your latest changes are saved then follow these steps:
    - Let other coders know about the pull request. They can review your code, download it, make sure it works, make comments, and then either _approve_ the Pull Request or _request changes_.
    - The Netlify bot will have a "Deploy Preview" link and you can see how your changes will look when pushed live.
    - There is a big green _Merge pull request_ button. When you push it, your changes will go live.
+
+### Further Reading
+
+- git: <https://docs.github.com/en/get-started/getting-started-with-git/set-up-git>
+- git branches: <https://www.atlassian.com/git/tutorials/using-branches>
+- pull requests: <https://docs.github.com/en/pull-requests>
+- HTML basics: <https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics>
+  - CSS basics: <https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics>
+  - JavaScript basics: <https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics>
+- Netlify, our hosting platform: <https://docs.netlify.com/get-started/>
 
 ### Development philosophy
 
