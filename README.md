@@ -87,13 +87,23 @@ Make sure your latest changes are saved.
       - Select `Checkout to...`
       - Enter a branch name. See Step 1 for naming ideas.
       - Make sure that `+ Create new branch...` is highlighted and press _Enter_.
+      - Fill in the Message field as normal and click _Publish branch_
 2. Create a _Pull Request_. You are requesting to _pull_ your changes in to the `master` branch. There at least two ways to do this. Pick the easiest for you.
-   1. In the _Source Control panel_, click the down caret `⌄` _next to_ the _Commit_ button.
-      - Select `Commit & Create Pull Request`.
+
+   1. In the _Source Control panel_ mouse over just above the _Message_ field.
+      - Find the icon for _Create pull request_ and click it.
       - Fill in the _Title_ and _Descripion_ fields.
       - Click `Create`
    2. Click [here](https://github.com/rendall/wanhatuukkala/compare)
-   - Select
+      - In the `compare:` drop-down, select your new branch name.
+      - Click _Create pull request_
+      - Fill in the title and description
+      - Click _Create pull request_
+   3. Let other coders know about the pull request. They can review your code, download it, make sure it works, make comments, and then either _approve_ the Pull Request or _request changes_.
+
+   4. The Pull Request page will [look like this](https://github.com/rendall/wanhatuukkala/pull/2).
+      - The Netlify bot will have a "Deploy Preview" link and you can see how your changes will look when pushed live.
+      - There is a big green _Merge pull request_ button. When you push it, your changes will go live.
 
 ### Development philosophy
 
