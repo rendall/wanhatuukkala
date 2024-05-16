@@ -28,7 +28,7 @@ Third, there is software that you should install on your system. Download and in
 
 Great. You have everything you need to make changes to the website. To do that, follow these steps:
 
-1. Find or create a "workspace" folder on your computer. It can be in your documents folder or somewhere else convenient. Name it "websites" or "projects" or "workspace".
+1. Find or create a "workspace" folder on your computer. It can be in your documents folder or somewhere else convenient. Name it "websites" or "projects" or "workspace" or whatever else works for you.
 2. Open _VS Code_. You should see a "Welcome" tab, and with a "Start" headline, and somewhere under that a _Clone Git Repository_ link. Click that.
 3. A text field will pop up. Enter this `https://github.com/rendall/wanhatuukkala`. This should download all of the source code into a `wanhatuukkala` folder _inside_ your workspace folder from step 1.
 4. Open the project in VS Code.
