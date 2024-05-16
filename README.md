@@ -71,39 +71,40 @@ However, if the website is just so messed up that you don't know how to go forwa
 5. Type in the terminal `git push --force`
    - This reverts all of the messed up changes back to what it was before.
 
-#### Pushing live with checks (recommended way)
+#### Pushing live with a Pull Request (the recommended way)
 
-Make sure your latest changes are saved.
+Make sure your latest changes are saved then follow these steps:
 
 1. Add your changes to a `git branch`. There are two ways. Pick whichever is easiest for you:
-   1. either: Type `git checkout -b new-branch` into the terminal.
+   1. _either_: Type `git checkout -b new-branch` into the terminal.
       - `new-branch` can be anything descriptive instead of `new-branch`, like `update-price-list`. It should only be lower-case letters and - dashes.
       - Type `git commit -m "Describe your changes"`
         - The "Describe your changes" part should be a description of your changes inside of quotes `""` and should be less than 50 characters.
-   2. or: Open the _Source Control panel_.
+   2. _or_: Open the _Source Control panel_.
       - Mouse-over just above the _Message_ field.
-      - You should see three dots appear `...` to the left of other icons with the tooltip _More actions_.
-      - Be careful, because there is _another_ three dots at the top, and that one is not the correct one.
+      - You should see three dots appear `...` to the right of other icons with the tooltip _More actions_. Click that.
+        - Be careful, because there is _another_ three dots at the top, and that one is not the correct one.
       - Select `Checkout to...`
       - Enter a branch name. See Step 1 for naming ideas.
       - Make sure that `+ Create new branch...` is highlighted and press _Enter_.
       - Fill in the Message field as normal and click _Publish branch_
 2. Create a _Pull Request_. You are requesting to _pull_ your changes in to the `master` branch. There at least two ways to do this. Pick the easiest for you.
 
-   1. In the _Source Control panel_ mouse over just above the _Message_ field.
+   1. _either_: In the _Source Control panel_ mouse over just above the _Message_ field.
       - Find the icon for _Create pull request_ and click it.
       - Fill in the _Title_ and _Descripion_ fields.
       - Click `Create`
-   2. Click [here](https://github.com/rendall/wanhatuukkala/compare)
+   2. _or_: Click [here](https://github.com/rendall/wanhatuukkala/compare) <https://github.com/rendall/wanhatuukkala/compare>
       - In the `compare:` drop-down, select your new branch name.
       - Click _Create pull request_
       - Fill in the title and description
       - Click _Create pull request_
-   3. Let other coders know about the pull request. They can review your code, download it, make sure it works, make comments, and then either _approve_ the Pull Request or _request changes_.
 
-   4. The Pull Request page will [look like this](https://github.com/rendall/wanhatuukkala/pull/2).
-      - The Netlify bot will have a "Deploy Preview" link and you can see how your changes will look when pushed live.
-      - There is a big green _Merge pull request_ button. When you push it, your changes will go live.
+3. Get other coders to review your changes. The Pull Request page will [look like this](https://github.com/rendall/wanhatuukkala/pull/2).
+
+   - Let other coders know about the pull request. They can review your code, download it, make sure it works, make comments, and then either _approve_ the Pull Request or _request changes_.
+   - The Netlify bot will have a "Deploy Preview" link and you can see how your changes will look when pushed live.
+   - There is a big green _Merge pull request_ button. When you push it, your changes will go live.
 
 ### Development philosophy
 
