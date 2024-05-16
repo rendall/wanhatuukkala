@@ -73,18 +73,27 @@ However, if the website is just so messed up that you don't know how to go forwa
 
 #### Pushing live with checks (recommended way)
 
+Make sure your latest changes are saved.
+
 1. Add your changes to a `git branch`. There are two ways. Pick whichever is easiest for you:
-   1. Type `git checkout -b new-branch` into the terminal.
+   1. either: Type `git checkout -b new-branch` into the terminal.
       - `new-branch` can be anything descriptive instead of `new-branch`, like `update-price-list`. It should only be lower-case letters and - dashes.
-   2. Open the _Source Control panel_.
+      - Type `git commit -m "Describe your changes"`
+        - The "Describe your changes" part should be a description of your changes inside of quotes `""` and should be less than 50 characters.
+   2. or: Open the _Source Control panel_.
       - Mouse-over just above the _Message_ field.
       - You should see three dots appear `...` to the left of other icons with the tooltip _More actions_.
       - Be careful, because there is _another_ three dots at the top, and that one is not the correct one.
       - Select `Checkout to...`
       - Enter a branch name. See Step 1 for naming ideas.
       - Make sure that `+ Create new branch...` is highlighted and press _Enter_.
-2. In the _Source Control panel_, click the down caret `⌄` _next to_ the _Commit_ button.
-3. Select `Commit & Create Pull Request`
+2. Create a _Pull Request_. You are requesting to _pull_ your changes in to the `master` branch. There at least two ways to do this. Pick the easiest for you.
+   1. In the _Source Control panel_, click the down caret `⌄` _next to_ the _Commit_ button.
+      - Select `Commit & Create Pull Request`.
+      - Fill in the _Title_ and _Descripion_ fields.
+      - Click `Create`
+   2. Click [here](https://github.com/rendall/wanhatuukkala/compare)
+   - Select
 
 ### Development philosophy
 
