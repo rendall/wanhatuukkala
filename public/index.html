@@ -64,6 +64,29 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
       font-size: 1.3rem;
     }
+
+    .price-list table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0.5rem;
+    }
+
+    table tr:nth-child(odd) {
+      background-color: transparent;
+    }
+
+    table th {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    table td {
+      padding-left: 0.5rem;
+    }
   </style>
   <script defer>
     window.addEventListener('DOMContentLoaded', (event) => {
@@ -99,7 +122,45 @@
           50500 Mikkeli
           <p>Puhelin: <a href="tel:044 5228777">044 5228777</a></p>
         </address>
+
       </section>
+      <section class="price-list">
+        <table>
+          <tr>
+            <th>Palvelu</th>
+            <th>Hinta</th>
+          </tr>
+          <tr>
+            <td>Tallipaikka</td>
+            <td>€350 - €600/kk</td>
+          </tr>
+          <tr>
+            <td>Valmennus</td>
+            <td>€30 - €50/kerta</td>
+          </tr>
+          <tr>
+            <td>Ratsastustunti</td>
+            <td>€25 - €45/tunti</td>
+          </tr>
+          <tr>
+            <td>Päivähoito</td>
+            <td>€20 - €30/päivä</td>
+          </tr>
+          <tr>
+            <td>Maastoratsastus</td>
+            <td>€40 - €60/tunti</td>
+          </tr>
+          <tr>
+            <td>Hevosen vuokraus</td>
+            <td>€150 - €300/kk</td>
+          </tr>
+          <tr>
+            <td>Hevosen kuljetus</td>
+            <td>€1 - €2/km + perusmaksu</td>
+          </tr>
+        </table>
+      </section>
+
       <section class="social-media">
 
         <!-- To add more social media links, copy and paste one of these <a></a> tags and fill in the proper info.
