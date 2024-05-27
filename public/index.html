@@ -1,108 +1,138 @@
 <!DOCTYPE html>
 <html lang="fi">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wanhan-tuukkalan talli</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:wght@400&display=block"
-    rel="stylesheet">
-  <meta name="description"
-    content="Wanhan-tuukkalan talli sijaitsee kätevästi lähellä Mikkelin keskustaa osoitteessa Tuukkalan kylätie 16.  Tarjoamme monipuolisia palveluita hevosharrastajille, mukaan lukien ratsastuksenopetusta, hevosten vuokrausta ja tallipaikkoja viihtyisässä maalaistallissa.">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wanhan-tuukkalan talli</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:wght@400&display=block"
+      rel="stylesheet">
+    <meta name="description"
+      content="Wanhan-tuukkalan talli sijaitsee kätevästi lähellä Mikkelin keskustaa osoitteessa Tuukkalan kylätie 16.  Tarjoamme monipuolisia palveluita hevosharrastajille, mukaan lukien ratsastuksenopetusta, hevosten vuokrausta ja tallipaikkoja viihtyisässä maalaistallissa.">
 
-  <meta property="og:title" content="Wanhan-tuukkalan talli">
-  <meta property="og:description" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="https://wanhatuukkala.fi/icon.png">
-  <meta property="og:image:alt" content="">
+    <meta property="og:title" content="Wanhan-tuukkalan talli">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://wanhatuukkala.fi/icon.png">
+    <meta property="og:image:alt" content="">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.png" type="image/png">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon.png">
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
 
-  <!-- This is a minimal style to fix very large jumps in style when the style.css is slow to load -->
-  <style>
-    body {
-      background-color: #d3c4c0;
-      color: #333;
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    <!-- This is a minimal style to fix very large jumps in style when the style.css is slow to load -->
+    <style>
+      body {
+        background-color: #d3c4c0;
+        color: #333;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
-    header {
-      background-color: #50281b;
-      text-align: center;
-    }
+      header {
+        background-color: #50281b;
+        text-align: center;
+      }
 
-    .display {
-      font-family: "Caveat", cursive;
-      font-optical-sizing: auto;
-      font-style: normal;
-    }
+      h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
 
-    .simple-icon {
-      width: 3.5rem;
-    }
+      .display {
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
 
-    .placard {
-      margin: 2.5rem auto;
-      padding: 1rem 2.5rem;
-      background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-      font-size: 1.3rem;
-    }
-  </style>
-  <script defer>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      const mapImage = document.querySelector('.map');
-      mapImage.addEventListener('error', function () {
-        this.onerror = null;
-        this.src = 'img/staticmap-fallback.png';
-        console.error('Failed to load Google map static image. Reverting to fallback image. Check the network tab of developer tools for more info.');
+      .simple-icon {
+        width: 3.5rem;
+      }
+
+      .placard {
+        margin: 2.5rem auto;
+        padding: 1rem 2.5rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        font-size: 1.3rem;
+      }
+
+      ul {
+        margin: 0 auto;
+        width: fit-content;
+        list-style: none;
+      }
+
+    </style>
+    <script defer>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const mapImage = document.querySelector('.map');
+        mapImage.addEventListener('error', function () {
+          this.onerror = null;
+          this.src = 'img/staticmap-fallback.png';
+          console.error('Failed to load Google map static image. Reverting to fallback image. Check the network tab of developer tools for more info.');
+        });
       });
-    });
-  </script>
-</head>
+    </script>
+  </head>
 
-<body>
-  <header>
-    <h1 class="display">Wanhan-tuukkalan talli</h1>
-  </header>
-  <main>
-    <div class="placard">
-      <section class="description">
-        <p>Wanhan-tuukkalan talli sijaitsee kätevästi lähellä Mikkelin keskustaa osoitteessa Tuukkalan kylätie 16.
-          Tarjoamme monipuolisia palveluita hevosharrastajille, mukaan lukien ratsastuksenopetusta, hevosten
-          vuokrausta ja tallipaikkoja viihtyisässä maalaistallissa.</p>
-      </section>
-      <section class="contact-info">
-        <a class="map-link" href="https://maps.app.goo.gl/DWJ1rBJajDQakeiDA">
-          <!-- documentation on Google static map API: https://developers.google.com/maps/documentation/maps-static/start -->
-          <img class="map" alt="Wanhan-Tuukkalan Tallin Kartta"
-            src="https://maps.googleapis.com/maps/api/staticmap?language=fi&size=320x320&map_id=wanhatuukkala&visible=Wanhan-Tuukkalan+Talli,Tuukkalankyl%C3%A4tie,Mikkeli,Finland&maptype=hybrid&scale=2&key=AIzaSyA6o3iJPZd3VYAVjtDf8WeaDBOG66cQQ0E&signature=Ac-8VLRwCFzxSao3a6C0Jc3bcKs=" />
-        </a>
-        <address>
-          Tuukkalan kylätie 16<br>
-          50500 Mikkeli
-          <p>Puhelin: <a href="tel:044 5228777">044 5228777</a></p>
-        </address>
-      </section>
-      <section class="social-media">
+  <body>
+    <header>
+      <h1 class="display">Wanhan-tuukkalan talli</h1>
+    </header>
+    <main>
+      <div class="placard">
+        <section class="description">
+          <p>Wanhan-tuukkalan talli sijaitsee kätevästi lähellä Mikkelin keskustaa osoitteessa Tuukkalan kylätie 16.
+            Tarjoamme monipuolisia palveluita hevosharrastajille, mukaan lukien ratsastuksenopetusta, hevosten
+            vuokrausta ja tallipaikkoja viihtyisässä maalaistallissa.</p>
+        </section>
+        <section class="contact-info">
+          <a class="map-link" href="https://maps.app.goo.gl/DWJ1rBJajDQakeiDA">
+            <!-- documentation on Google static map API: https://developers.google.com/maps/documentation/maps-static/start -->
+            <img class="map" alt="Wanhan-Tuukkalan Tallin Kartta"
+              src="https://maps.googleapis.com/maps/api/staticmap?language=fi&size=320x320&map_id=wanhatuukkala&visible=Wanhan-Tuukkalan+Talli,Tuukkalankyl%C3%A4tie,Mikkeli,Finland&maptype=hybrid&scale=2&key=AIzaSyA6o3iJPZd3VYAVjtDf8WeaDBOG66cQQ0E&signature=Ac-8VLRwCFzxSao3a6C0Jc3bcKs=" />
+          </a>
+          <address>
+            Tuukkalan kylätie 16<br>
+            50500 Mikkeli
+            <p>Puhelin: <a href="tel:044 5228777">044 5228777</a></p>
+          </address>
 
-        <!-- To add more social media links, copy and paste one of these <a></a> tags and fill in the proper info.
+        </section>
+        <section class="price-list">
+          <h2>Hinnasto</h2>
+          <ul>
+            <li>Ratsastustunti: 25€</li>
+            <li>Yksityistunti: 50€</li>
+            <li>Paritunti: 60€</li>
+            <li>10 kerran kortti: 200€ (voimassa 3kk)</li>
+            <section></section>
+            <li>Leirit: 350€ (varausmaksu 80€)</li>
+            <li>Tulevat leirit löydät meidän Facebookista!</li>
+            <section></section>
+            <li>Tallivuokra karsinapaikka - 340€/kk</li>
+            <li>Tallivuokra pihattopaikka - 270€/kk</li>
+            <li>Emme vuokraa erikseen laidunpaikkoja.</li>
+          </ul>
+        </section>
+
+        <section class="social-media">
+
+          <!-- To add more social media links, copy and paste one of these <a></a> tags and fill in the proper info.
 
              Then go here to get the simple-icon for the social-media account: https://simpleicons.org/
 
@@ -111,22 +141,25 @@
               <img class="simple-icon" alt="Instagram" src="img/instagram.svg" />
             </a>
           -->
+            <a class="social-media-link" href="https://www.instagram.com/wanhatuukkala/">
+              <img class="simple-icon" alt="Instagram" src="img/instagram.svg" />
+            </a>
 
-        <a class="social-media-link" href="https://www.facebook.com/WanhanTuukkalanRatsastajat">
-          <img class="simple-icon" alt="Facebookissa" src="img/facebook.svg" />
-        </a>
+          <a class="social-media-link" href="https://www.facebook.com/WanhanTuukkalanRatsastajat">
+            <img class="simple-icon" alt="Facebookissa" src="img/facebook.svg" />
+          </a>
 
-        <a class="social-media-link" href="https://maps.app.goo.gl/DWJ1rBJajDQakeiDA">
-          <img class="simple-icon" alt="Kartalla" src="img/googlemaps.svg" />
-        </a>
+          <a class="social-media-link" href="https://maps.app.goo.gl/DWJ1rBJajDQakeiDA">
+            <img class="simple-icon" alt="Kartalla" src="img/googlemaps.svg" />
+          </a>
 
-        <a class="social-media-link"
-          href="https://github.com/rendall/wanhatuukkala?tab=readme-ov-file#wanhan-tuukkalan-tallin-kotisivu">
-          <img class="simple-icon" alt="Lähdekoodi" src="img/github.svg" />
-        </a>
-      </section>
-    </div>
-  </main>
-</body>
+          <a class="social-media-link"
+            href="https://github.com/rendall/wanhatuukkala?tab=readme-ov-file#wanhan-tuukkalan-tallin-kotisivu">
+            <img class="simple-icon" alt="Lähdekoodi" src="img/github.svg" />
+          </a>
+        </section>
+      </div>
+    </main>
+  </body>
 
 </html>
