@@ -32,26 +32,58 @@ Great. You have everything you need to make changes to the website. To do that, 
 2. Open _VS Code_. You should see a "Welcome" tab, and with a "Start" headline, and somewhere under that a _Clone Git Repository_ link. Click that.
 3. A text field will pop up. Enter this `https://github.com/rendall/wanhatuukkala`. This should download all of the source code into a `wanhatuukkala` folder _inside_ your workspace folder from step 1.
 4. Open the project in VS Code.
+   - On the left you should see the _Explorer_ panel which has all of the files and folders of the project.
+     - If you do not see this panel, from the menu click *View* > *Explorer*.
+
+   - The website folders are in the `public` folder.
+     - Click the word `> public` to _expand_ the folder and see the files inside.
+   - Inside that folder is an `index.html`.
+     - Click `index.html` to open the file in the _Editor_ window.
+     - Or from the menu click *Go* > *Go to File...*, then type _index.html_ and press _Enter_ .
+
+   - `index.html` is the source code for the home page of the website.
    - When you have a chance, [read the Get Started section](https://code.visualstudio.com/docs/getstarted/userinterface) of the manual.
-   - On the left you should see a panel that has all of the files and folders of the project. The website folders are in the `public` folder. Inside that folder is an `index.html`. This is the source code for the home page of the website.
-5. With the project open in VS Code, [open a terminal](https://code.visualstudio.com/docs/terminal/basics) and type `npm -v`. If you get a version number, great! _Node.js_ is installed correctly. If instead you get a `Command 'npm' not found` error, then your installation of _Node.js_ is incorrect and you need to install it again, carefully. Ask me for help!
-6. Type `npx http-server -a localhost ./public`. This runs a webserver on your computer.
+5. With the project open in VS Code, [open a terminal](https://code.visualstudio.com/docs/terminal/basics) (From the menu, use the *Terminal* > *New Terminal* or *View* > *Terminal* menu commands) 
+  - Type `npm -v` into the terminal. 
+  - If you get a version number (looks something like `v10.7`, great! _Node.js_ is installed correctly.
+  - If instead you get a `Command 'npm' not found` error, then your installation of _Node.js_ is incorrect and you need to install it again, carefully. Ask me for help!
+
+6. Into the terminal, type `npx http-server -a localhost ./public`. This runs a little webserver on your computer.
 7. Open <http://localhost> in your browser and you should see Heidi's website!
 
 Congratulations, you have everything you need to code!
 
 ### Coding
 
-1. Open `index.html` in VS Code. This is Heidi's site.
+1. Open `index.html` in VS Code editor. This is Heidi's site.
    - It is written in HTML (Hyper Text Markup Language). When you have a chance, [read more about HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics).
-2. Make a small change to the `index.html` page. For instance, replace the word `hevosten` with `omenan`. Save your change in VS Code and then refresh the browser. You should see your change on your local webstie.
+2. Make a small change to the `index.html` page. For instance, replace the word `hevosten` with `omenan`. Save your change in VS Code and then refresh the browser. You should see your change on your local website.
    - Don't worry. These changes aren't permanent and they do not affect the _production_ website. You only affect your local version of the site. Go ahead and undo that change.
 
 Use your new-found ability to change the website as a way to explore and learn about [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) and [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics). Add content like text and pictures. Change colors. Make mistakes. If you have a goal in mind, like adding a gallery or a new announcement, try to implement your goal. Ask for help! Have fun!
 
 ### Pushing live
 
-When you're ready and your goal is met, then you can push your changes live so they show up on <https://wanhantuukkalantalli.fi/>. Here is how:
+#### Credentials
+
+In order to push your changes to the internet, you need to let GitHub know who you are. Download and install the [Github Command-line-interface (CLI)](https://cli.github.com/).
+
+1. Go here <https://cli.github.com>
+1. If your operating system is not listed, then go here <https://github.com/cli/cli?tab=readme-ov-file#github-cli> and choose how to install it.
+1. When it's installed, open a terminal and type `gh auth login`
+   1. Make sure `Github.com` is highlighted and press _Enter_
+   1. `HTTPS` then _Enter_
+   1. _Authenticate Git with your GitHub credentials?_  Type `Y` and press _Enter_
+   1. `Login with a web browser` then _Enter_
+   1. Copy the code that looks like *6CE4-4C6D* and _Enter_
+   1. Paste the code into the browser.
+   1. Follow the directions in the browser.
+
+Great! Now you are credentialed with GitHub.
+
+#### Committing changes
+
+When your changes to the website are ready ready and your goal is met, then you can push your changes live so they show up on <https://wanhantuukkalantalli.fi/>. Here is how:
 
 1. First, make sure you really want these changes live. Don't accidentally turn the horse farm into an apple orchard, for instance!
 2. Open the _Source Control panel_ in VS Code
@@ -59,6 +91,7 @@ When you're ready and your goal is met, then you can push your changes live so t
 3. In the _Message_ field, the placeholder text should say (something like) _Message (Ctrl+Enter to commit on "master")_. It has to mention _"master"_.
 4. In that _Message_ field, add a _short_ (under 50 character) description of your changes.
 5. Click _Commit_.
+6. You might have to click _Push_ or _Sync changes_.
 
 #### Messed up website
 
